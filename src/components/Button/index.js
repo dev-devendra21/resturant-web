@@ -3,7 +3,7 @@ import './index.css'
 import {useCart} from '../../context/CartContext'
 
 const Button = props => {
-  const {id, addToCart, decreaseQuantity, increaseQuantity} = props
+  const {id, addToCart} = props
   const {cart} = useCart()
   const dishQuantity = cart.find(dish => dish.id === id)?.quantity
   const [quantity, setQuantity] = useState(dishQuantity || 0)

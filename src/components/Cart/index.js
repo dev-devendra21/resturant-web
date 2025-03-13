@@ -1,5 +1,5 @@
 import CartItem from '../CartItem'
-
+import Header from '../Header'
 import './index.css'
 import {useCart} from '../../context/CartContext'
 
@@ -13,6 +13,7 @@ const Cart = () => {
   } = useCart()
   return (
     <>
+      <Header />
       <div className="cart-containers">
         {cart.length === 0 ? (
           <div className="empty-cart-container">

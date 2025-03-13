@@ -14,16 +14,9 @@ const DishItem = props => {
     addonCat,
     dishType,
     dishId,
-    dishQuantity,
   } = props
 
-  const {
-    cart,
-    addCartItem,
-    removeCartItem,
-    incrementCartItemQuantity,
-    decrementCartItemQuantity,
-  } = useCart()
+  const {addCartItem} = useCart()
 
   const addToCart = (id, quantity) => {
     const payload = {
@@ -35,29 +28,6 @@ const DishItem = props => {
     }
     return addCartItem(id, payload)
   }
-
-  // const removeFromCart = () => removeCartItem(dishId)
-
-  // const handleIncreaseQuantity = () => {
-  //   const isExist = cart.find(item => item.id === dishId)
-  //   if (isExist) {
-  //     incrementCartItemQuantity(dishId)
-  //   } else {
-  //     addToCart()
-  //   }
-  // }
-
-  // const handleDecreaseQuantity = () => {
-  //   const isExist = cart.find(item => item.id === dishId)
-  //   if (isExist) {
-  //     if (isExist.quantity > 0) {
-  //       decrementCartItemQuantity(dishId)
-  //     }
-  //   }
-  //   if (isExist.quantity <= 1) {
-  //     removeFromCart()
-  //   }
-  // }
 
   return (
     <li className="dishes-card">

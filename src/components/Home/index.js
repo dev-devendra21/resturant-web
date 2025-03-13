@@ -1,5 +1,6 @@
 import Category from '../Category'
 import Dishes from '../Dishes'
+import Header from '../Header'
 import './index.css'
 import {useCart} from '../../context/CartContext'
 
@@ -30,14 +31,13 @@ const Home = () => {
   let data = []
   let index = 0
 
-  console.log(restaurantData)
-
   if (restaurantData.status === 'SUCCESS') {
     data = formatData(restaurantData.data.table_menu_list)
     index = data.findIndex(eachData => eachData.menuCategoryId === selectedId)
   }
   return (
     <>
+      <Header />
       <Category categoryData={data} />
       <Dishes categoryDishes={data[index]?.categoryDishes} />
     </>

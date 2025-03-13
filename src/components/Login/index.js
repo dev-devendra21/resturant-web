@@ -39,32 +39,29 @@ const Login = props => {
     <div className="login-bg-container">
       <div className="form-card-container">
         <form className="form-container" onSubmit={handleSubmit}>
-          <div className="username-container">
-            <label className="label-text" htmlFor="username">
-              USERNAME
-            </label>
-            <input
-              placeholder="Username"
-              id="username"
-              type="text"
-              value={username}
-              className="input"
-              onChange={e => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="password-container">
-            <label className="label-text" htmlFor="password">
-              PASSWORD
-            </label>
-            <input
-              placeholder="Password"
-              id="password"
-              type="password"
-              value={password}
-              className="input"
-              onChange={e => setPassword(e.target.value)}
-            />
-          </div>
+          <label className="label-text" htmlFor="username">
+            USERNAME
+          </label>
+          <input
+            placeholder="Username"
+            id="username"
+            type="text"
+            value={username}
+            className="input"
+            onChange={e => setUsername(e.target.value)}
+          />
+
+          <label className="label-text" htmlFor="password">
+            PASSWORD
+          </label>
+          <input
+            placeholder="Password"
+            id="password"
+            type="password"
+            value={password}
+            className="input"
+            onChange={e => setPassword(e.target.value)}
+          />
           <button className="login-btn" type="submit">
             Login
           </button>
